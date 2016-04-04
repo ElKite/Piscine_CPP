@@ -6,12 +6,14 @@
 //   By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/04 13:03:46 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/04 13:36:43 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/04 17:57:23 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #ifndef CONTACT_CLASS_H
-# define CONCTACT_CLASS_H
+# define CONTACT_CLASS_H
+
+#include <iostream>
 
 class Contact {
 
@@ -20,29 +22,29 @@ public:
 	Contact();
 	~Contact();
 
-	std::string getFistName();
+	std::string getFirstName();
 	std::string getLastName();
-	std::string getNickName();
+	std::string getNickname();
 	std::string getLogin();
 	std::string getPostalAddress();
 	std::string getEmailAddress();
 	std::string getPhoneNumber();
 	std::string getBirthdayDate();
 	std::string getFavoriteMeal();
-	std::string getUndeawearColor();
+	std::string getUnderwearColor();
 	std::string getDarkestSecret();
 
-	std::string setFistName();
-	std::string setLastName();
-	std::string setNickName();
-	std::string setLogin();
-	std::string setPostalAddress();
-	std::string setEmailAddress();
-	std::string setPhoneNumber();
-	std::string setBirthdayDate();
-	std::string setFavoriteMeal();
-	std::string setUndeawearColor();
-	std::string setDarkestSecret();
+	void setFirstName(std::string s);
+	void setLastName(std::string s);
+	void setNickname(std::string s);
+	void setLogin(std::string s);
+	void setPostalAddress(std::string s);
+	void setEmailAddress(std::string s);
+	void setPhoneNumber(std::string s);
+	void setBirthdayDate(std::string s);
+	void setFavoriteMeal(std::string s);
+	void setUnderwearColor(std::string s);
+	void setDarkestSecret(std::string s);
 	
 private :
 
@@ -55,7 +57,7 @@ private :
 	std::string phoneNumber;
 	std::string birthdayDate;
 	std::string favoriteMeal;
-	std::string undearwearColor;
+	std::string underwearColor;
 	std::string darkestSecret;
 };
 

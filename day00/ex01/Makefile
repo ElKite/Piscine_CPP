@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/04/04 12:56:41 by vtarreau          #+#    #+#              #
-#    Updated: 2016/04/04 13:01:34 by vtarreau         ###   ########.fr        #
+#    created: 2016/04/04 12:56:41 by vtarreau          #+#    #+#              #
+#    Updated: 2016/04/04 16:51:39 by vtarreau         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -14,7 +14,9 @@ CC = clang++
 NAME = XXPhoneBook2000XX
 CFLAGS = -Wall -Wextra -Werror
 OBJDIR = obj/
-SRCS =
+SRCS = main.cpp \
+		Contact.class.cpp \
+		PhoneBook.class.cpp
 
 OBJS = $(addprefix $(OBJDIR),$(subst .cpp,.o,$(SRCS)))
 
