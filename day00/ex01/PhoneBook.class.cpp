@@ -6,7 +6,7 @@
 //   By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/04 15:25:41 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/04 19:59:09 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/05 14:18:06 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -53,7 +53,7 @@ void PhoneBook::add()
 {
 	if (contactNbr >= 8)
 	{
-		std::cout << "Vous possedez le maximum de contacts (9)" << std::endl;
+		std::cout << "Vous possedez le maximum de contacts (8)" << std::endl;
 		std::cout << "Saissez le login du contact a remplacer ou taper CANCEL" << std::endl;
 		
 		std::string tmp;
@@ -67,9 +67,9 @@ void PhoneBook::add()
 					flag = 1;
 					break ;
 				}
-				if (flag == 0)
-					std::cout << "Ce contact n'existe pas..." << std::endl;
 			}
+			if (flag == 0)
+				std::cout << "Ce contact n'existe pas..." << std::endl;
 		}
 	}
 	else 
@@ -229,8 +229,12 @@ void PhoneBook::search()
 		
 		std::string index;
 		std::cin >> index;
-		if (index.length() == 1 && (index[0] >= '0' && index[0] <= '9'))
+		if (index.length() == 1 && (index[0] >= '0' && index[0] <= '9')) {
 			displayContact(index[0] - 48);
+			return ;
+		} else {
+			std::cout << "Ce contact n'existe pas ..." << std::endl;
+		}
 	}
 }
 
