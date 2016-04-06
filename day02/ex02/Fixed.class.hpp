@@ -6,7 +6,7 @@
 //   By: vtarreau <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/06 14:16:01 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/06 18:10:22 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/06 19:28:16 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -27,12 +27,31 @@ public:
 	~Fixed();
 
 	Fixed & operator=(Fixed const & rhs);
+	bool operator>(Fixed const & rhs);
+	bool operator<(Fixed const & rhs);
+	bool operator>=(Fixed const & rhs);
+	bool operator<=(Fixed const & rhs);
+	bool operator==(Fixed const & rhs);
+	bool operator!=(Fixed const & rhs);
+
+	Fixed operator+(Fixed const & rhs) const;
+	Fixed operator-(Fixed const & rhs) const;
+	Fixed operator*(Fixed const & rhs) const;
+	Fixed operator/(Fixed const & rhs) const;
 
 	float toFloat(void) const;
 	int	toInt(void) const;
 
 	int getRawBits() const;
 	void setRawBits(int const raw);
+
+	Fixed & operator++();
+	Fixed operator++(int);
+
+	staticFixed & min(Fixed & a, Fixed & b);
+	static Fixed const & min(Fixed const & a, Fixed const & b);
+	static Fixed & max(Fixed & a, Fixed & b);
+	static Fixed const & max(Fixed const & a, Fixed const & b);
 
 private:
 
