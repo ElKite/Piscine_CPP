@@ -6,7 +6,7 @@
 //   By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/05 18:58:55 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/05 19:57:46 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/06 12:36:00 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -39,12 +39,16 @@ int main(int count, char **args)
 
 			while (std::getline(readFile, line))
 			{
-				size_t pos = line.find(s1);
-				if (pos != std::string::npos)
-					line.replace(pos, len, s2);
+				while (true) 
+				{
+					size_t pos = line.find(s1);
+					if (pos != std::string::npos)
+						line.replace(pos, len, s2);
+					else
+						break ;
+				}
 				writeFile << line << std::endl;
 			}
-
 			readFile.close();
 			writeFile.close();	
 		}
