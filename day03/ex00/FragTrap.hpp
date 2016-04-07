@@ -6,7 +6,7 @@
 //   By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/07 12:04:00 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/07 12:35:10 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/07 14:06:46 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -44,8 +44,10 @@ public:
 	void beRepaired(unsigned int amount);
 	void vaulthunter_dot_exe(std::string const & target);
 
+	void Init();
+
 	void setHitPts(int i);
-	void setmaxHitsPts(int i);
+	void setMaxHitPts(int i);
 	void setEnergyPts(int i);
 	void setMaxEnergyPts(int i);
 	void setLevel(int i);
@@ -53,18 +55,16 @@ public:
 	void setRangedDmg(int i);
 	void setArmorDmgReduction(int i);
 
-	int	getHitPts();
-	int	getMaxHitPts();
-	int	getEnergyPts();
-	int	getMaxEnergyPts();
-	int	getLevel();
-	int	getMeleeDmg();
-	int	getRangedDmg();
-	int	getArmorDmgReduction();
-	std::string getName();
+	int	getHitPts() const;
+	int	getMaxHitPts() const;
+	int	getEnergyPts() const;
+	int	getMaxEnergyPts() const;
+	int	getLevel() const;
+	int	getMeleeDmg() const;
+	int	getRangedDmg() const;
+	int	getArmorDmgReduction() const;
+	std::string getName() const;
 	
 };
-
-std::ostream & operator<<(std::ostream & o, FragTrap const & i);
 
 #endif
