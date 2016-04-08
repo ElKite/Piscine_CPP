@@ -6,7 +6,7 @@
 //   By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/08 12:14:29 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/08 14:51:29 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/08 16:15:57 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,23 +14,20 @@
 
 Peon::Peon()
 {
-	this->name = "DEFAULT_PEON";
-
-	std::cout << "Zog zog" <<std::endl;
 }
 
-Peon::Peon(std::string name)
+Peon::Peon(std::string name) : Victim(name)
 {
 	this->name = name;
 
-	std::cout << "Zog zog" <<std::endl;
+	std::cout << "Zog zog." <<std::endl;
 }
 
 Peon::Peon(Peon const & src)
 {
 	*this = src;
 
-	std::cout << "Zog zog" <<std::endl;
+	std::cout << "Zog zog." <<std::endl;
 }
 
 Peon::~Peon()
@@ -46,7 +43,7 @@ Peon & Peon::operator=(Peon const & rhs)
 
 std::ostream & operator<<(std::ostream & o, Peon const & rhs)
 {
-	o << "I am " << rhs.getName() << " and I like otters !";
+	o << "I am " << rhs.getName() << " and I like otters !" << std::endl;;
 	return o;
 }
 

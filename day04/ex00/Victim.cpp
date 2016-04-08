@@ -6,7 +6,7 @@
 //   By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/08 12:14:29 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/08 14:26:10 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/08 16:16:40 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,15 +14,11 @@
 
 Victim::Victim()
 {
-	this->name = "DEFAULT_VICTIM";
-
-	std::cout << "Some random victim called "<<  this->name << " just popped !" << std::endl;
 }
 
 Victim::Victim(std::string name)
 {
 	this->name = name;
-
 	std::cout << "Some random victim called "<<  this->name << " just popped !" << std::endl;
 }
 
@@ -47,7 +43,7 @@ Victim & Victim::operator=(Victim const & rhs)
 
 std::ostream & operator<<(std::ostream & o, Victim const & rhs)
 {
-	o << "I am " << rhs.getName() << " and I like otters !";
+	o << "I am " << rhs.getName() << " and I like otters !" << std::endl;;
 	return o;
 }
 

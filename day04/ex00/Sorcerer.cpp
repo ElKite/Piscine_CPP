@@ -6,7 +6,7 @@
 //   By: vtarreau <vtarreau@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2016/04/08 12:14:29 by vtarreau          #+#    #+#             //
-//   Updated: 2016/04/08 14:24:43 by vtarreau         ###   ########.fr       //
+//   Updated: 2016/04/08 16:03:35 by vtarreau         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,10 +14,6 @@
 
 Sorcerer::Sorcerer()
 {
-	this->name = "DEFAULT";
-	this->title = "THE MAGNIFICIENT";
-
-	std::cout << this->name << ", " << this->title << ", is born !" << std::endl;
 }
 
 Sorcerer::Sorcerer(std::string name, std::string title)
@@ -50,7 +46,7 @@ Sorcerer & Sorcerer::operator=(Sorcerer const & rhs)
 
 std::ostream & operator<<(std::ostream & o, Sorcerer const & rhs)
 {
-	o << "I am " << rhs.getName() << ", " << rhs.getTitle() << ", and I like ponies !";
+	o << "I am " << rhs.getName() << ", " << rhs.getTitle() << ", and I like ponies !" << std::endl;;
 	return o;
 }
 
